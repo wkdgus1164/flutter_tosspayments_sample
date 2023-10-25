@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Handlers</h1>
+    <script>
+      window.addEventListener(
+        "flutterInAppWebViewPlatformReady",
+        function (event) {
+          console.log(event);
+          if (window.flutter_inappwebview.callHandler) {
+            window.flutter_inappwebview
+              .callHandler("handlerName")
+              .then(function (result) {
+                console.log(JSON.stringify(result));
+                return result;
+              });
+          } else {
+            window.flutter_inappwebview
+              ._callHandler("handlerName")
+              .then(function (result) {
+                console.log(JSON.stringify(result));
+                return result;
+              });
+          }
+        }
+      );
+    </script>
+  </body>
+</html>
