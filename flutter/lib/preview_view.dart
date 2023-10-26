@@ -27,8 +27,8 @@ class _PreviewViewState extends State<PreviewView> {
       appBar: AppBar(title: const Text("WebView")),
       body: InAppWebView(
         initialOptions: options,
-        initialUrlRequest: URLRequest(
-            url: Uri.parse('https://fc10-218-236-78-53.ngrok-free.app')),
+        initialUrlRequest:
+            URLRequest(url: Uri.parse('https://toss-payments.web.app/')),
         onWebViewCreated: (controller) {
           controller.addJavaScriptHandler(
             handlerName: 'handlerName',
