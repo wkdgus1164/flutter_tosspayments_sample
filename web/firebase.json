@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "toss-payments",
-    "public": "/",
+    "public": "web",
     "ignore": [
       "firebase.json",
       "**/.*",
